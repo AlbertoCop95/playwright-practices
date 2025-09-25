@@ -16,13 +16,12 @@ test.describe('Todoist Login Cases', async () => {
     homePage = new HomePage(page);
   })
 
-  test('Happy Path @test', async ({ page }) => {
+  test('Happy Path', async ({ page }) => {
     await landingPage.goto();
     await landingPage.openLoginScreen();
     await loginPage.login(USERNAME, PASSWORD);
-
     await page.waitForLoadState('load');
 
-    expect(homePage.sideBar).toBeVisible();
+    await expect(homePage.sideBar).toBeVisible();
   });
 });

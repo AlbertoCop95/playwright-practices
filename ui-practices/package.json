@@ -2,7 +2,8 @@
   "name": "ui-practices",
   "version": "1.0.0",
   "scripts": {
-    "todoist:local": "npx playwright test --project chrome --grep @test"
+    "todoist:local": "npx playwright test --project chrome --grep @test",
+    "todoist:local:debug": "npx playwright test --project chrome --grep @test --debug"
   },
   "author": "AlbertoCop95",
   "license": "ISC",
