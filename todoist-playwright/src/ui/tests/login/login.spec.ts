@@ -13,7 +13,7 @@ test.describe('Todoist Login Cases', async () => {
     landingPage = new LandingPage(page);
     loginPage = new LoginPage(page);
     homePage = new HomePage(page);
-  })
+  });
 
   test('Happy Path', async ({ page }) => {
     await landingPage.goto();

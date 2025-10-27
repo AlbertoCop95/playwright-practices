@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "required": ["results", "next_cursor"],
+  "additionalProperties": false,
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "user_id",
+          "id",
+          "project_id",
+          "section_id",
+          "parent_id",
+          "added_by_uid",
+          "assigned_by_uid",
+          "responsible_uid",
+          "labels",
+          "deadline",
+          "duration",
+          "checked",
+          "is_deleted",
+          "added_at",
+          "completed_at",
+          "updated_at",
+          "due",
+          "priority",
+          "child_order",
+          "content",
+          "description",
+          "note_count",
+          "day_order",
+          "is_collapsed"
+        ],
+        "properties": {
+          "user_id": { "type": "string" },
+          "id": { "type": "string" },
+          "project_id": { "type": "string" },
+          "section_id": { "type": ["null", "string"] },
+          "parent_id": { "type": ["null", "string"] },
+          "added_by_uid": { "type": ["null", "string"] },
+          "assigned_by_uid": { "type": ["null", "string"] },
+          "responsible_uid": { "type": ["null", "string"] },
+          "labels": { "type": "array" },
+          "deadline": { "type": ["null", "string"] },
+          "duration": { "type": ["null", "string"] },
+          "checked": { "type": "boolean" },
+          "is_deleted": { "type": "boolean" },
+          "added_at": { "type": "string" },
+          "completed_at": { "type": ["null", "string"] },
+          "updated_at": { "type": "string" },
+          "due": {
+            "type": ["null", "object"],
+            "required": ["date", "timezone", "string", "lang", "is_recurring"],
+            "properties": {
+              "date": { "type": "string" },
+              "timezone": { "type": ["null", "string"] },
+              "string": { "type": "string" },
+              "lang": { "type": "string" },
+              "is_recurring": { "type": "boolean" }
+            }
+          },
+          "priority": { "type": "integer" },
+          "child_order": { "type": "integer" },
+          "content": { "type": "string" },
+          "description": { "type": "string" },
+          "note_count": { "type": "integer" },
+          "day_order": { "type": "integer" },
+          "is_collapsed": { "type": "boolean" }
+        }
+      }
+    },
+    "next_cursor": { "type": ["null", "string"] }
+  }
+}
