@@ -1,6 +1,6 @@
-## Playwright Practices
+## Todpist Playwright Project
 
-## UI Practices
+## UI
 
 ### Critical Paths
 
@@ -23,6 +23,15 @@
 - Login
 - Tasks
 - Projects
+
+### Json Schema Validation
+
+- [Ajv](https://ajv.js.org/)
+
+Created a helper generic funciton that encapsulates the Ajv declaration + logic to validate/compile a jsonchema and a response body and returns a boolean + errors (if applicable).
+
+**jsonSchemaValidator.js** -> `todoist-playwright/src/api/utils/jsonSchemaValidator.ts`
+
 
 ### Tech Stack
 
